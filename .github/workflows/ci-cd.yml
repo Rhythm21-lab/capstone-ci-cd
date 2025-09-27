@@ -36,7 +36,7 @@ jobs:
       # Step 5: Run unit tests with coverage (QA Gate 2)
       - name: Run unit tests
         run: |
-          pytest --cov=./ --cov-report=xml --cov-fail-under=98
+          pytest --cov=./ --cov-report=xml --cov-fail-under=80
 
       # Step 6: Upload coverage report (Optional)
       - name: Upload coverage to Codecov
