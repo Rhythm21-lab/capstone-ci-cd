@@ -67,3 +67,8 @@ jobs:
       # Docker Push
       - name: Push Docker image
         run: docker push ${{ secrets.DOCKER_USERNAME }}/capstone-flask:latest
+
+- name: Upload coverage to Codecov
+  uses: codecov/codecov-action@v3
+  with:
+    token: ${{ secrets.CODECOV_TOKEN }}
